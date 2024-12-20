@@ -1,0 +1,69 @@
+PS C:\Users\yuki kanayama\Documents\dockerpractice> git init
+Initialized empty Git repository in C:/Users/yuki kanayama/Documents/dockerpractice/.git/
+PS C:\Users\yuki kanayama\Documents\dockerpractice> git add .
+PS C:\Users\yuki kanayama\Documents\dockerpractice> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   app.py
+        new file:   dockerfile
+        new file:   requirements.txt
+
+PS C:\Users\yuki kanayama\Documents\dockerpractice> git branch
+PS C:\Users\yuki kanayama\Documents\dockerpractice> git commit -m "3 folders created"  
+[master (root-commit) f387944] 3 folders created
+ 3 files changed, 26 insertions(+)
+ create mode 100644 app.py
+ create mode 100644 dockerfile
+ create mode 100644 requirements.txt
+PS C:\Users\yuki kanayama\Documents\dockerpractice> git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+PS C:\Users\yuki kanayama\Documents\dockerpractice> git remote add main https://github.com/TIS-YUKI/CROSSVALIDATION/issues
+PS C:\Users\yuki kanayama\Documents\dockerpractice> git push . 
+Everything up-to-date
+PS C:\Users\yuki kanayama\Documents\dockerpractice> git push -u origin main
+>>
+error: src refspec main does not match any
+error: failed to push some refs to 'origin'
+PS C:\Users\yuki kanayama\Documents\dockerpractice> git rm
+fatal: No pathspec was given. Which files should I remove?
+PS C:\Users\yuki kanayama\Documents\dockerpractice> git remote 
+main
+PS C:\Users\yuki kanayama\Documents\dockerpractice> git remote rm
+usage: git remote remove <name>
+
+PS C:\Users\yuki kanayama\Documents\dockerpractice> git remote rm main
+PS C:\Users\yuki kanayama\Documents\dockerpractice> git remote add origin https://github.com/TIS-YUKI/CROSSVALIDATION
+PS C:\Users\yuki kanayama\Documents\dockerpractice> git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/TIS-YUKI/CROSSVALIDATION'
+PS C:\Users\yuki kanayama\Documents\dockerpractice> git branch -m main
+PS C:\Users\yuki kanayama\Documents\dockerpractice> git remote add origin https://github.com/TIS-YUKI/CROSSVALIDATION.git
+>>
+error: remote origin already exists.
+PS C:\Users\yuki kanayama\Documents\dockerpractice> git remote rm origin
+PS C:\Users\yuki kanayama\Documents\dockerpractice> git remote add origin https://github.com/TIS-YUKI/CROSSVALIDATION.git
+>>
+PS C:\Users\yuki kanayama\Documents\dockerpractice> git branch -M main
+PS C:\Users\yuki kanayama\Documents\dockerpractice> git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 762 bytes | 190.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/TIS-YUKI/CROSSVALIDATION.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
